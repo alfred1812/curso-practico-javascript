@@ -1,37 +1,52 @@
-const ladoCuadrado=5;
-const perimetroCuadrado=ladoCuadrado*4;
-const areaCuadrado=ladoCuadrado*ladoCuadrado;
+function ladoCuadrado(lado){
+    return lado;
+}
+
+function perimetroCuadrado(lado){
+    return lado*4;
+}
+
+function areaCuadrado(lado){
+    return Math.pow(lado,2);
+}
+
 console.group("Cuadrado: ");
-console.log("El lado del cuadrado es "+ladoCuadrado);
-console.log("El Perimetro del cuadrado es:"+perimetroCuadrado);
-console.log("el Area del cuadrado es: "+areaCuadrado);
+console.log("El lado del cuadrado es " + ladoCuadrado);
+console.log("El Perimetro del cuadrado es:" + perimetroCuadrado);
+console.log("el Area del cuadrado es: " + areaCuadrado);
 console.groupEnd();
 
 
-const ladoA=6;
-const ladoB=6;
-const base=4;
-const altura=Math.sqrt(Math.pow(ladoA,2)-Math.pow(base,2));
-const perimetroTriangulo=ladoA+ladoB+base;
-//const perimetroTriangulo=ladoA*4;
-const areaTriangulo=(base*altura)/2;
-console.group("Triangulo: ");
-console.log("Los lados del triangulo son LadoA="+ladoA+", LadoB=" +ladoB+" y Base="+base);
-console.log("Altura " +altura);
-console.log("El Perimetro del Triangulo es:"+perimetroTriangulo);
-console.log("El Area del Triangulo es: "+areaTriangulo);
+function altura(ladoA, ladoB, base){
+    return Math.sqrt(Math.pow(ladoA, 2) - Math.pow(base, 2));
+}
+
+function perimetroTriangulo(ladoA, ladoB, base){
+    return ladoA + ladoB + base;
+}
+
+function areaTriangulo(altura, base){
+    return (base*altura)/2;
+}
+
 console.groupEnd();
 
+function radioCirculo(radio){
+    return radioCirculo;
+}
 
-const radioCirculo=4;
-const diametroCirculo=radioCirculo*2;
-const pi=Math.PI;
-const perimetroCirculo=2*pi*radioCirculo;
-const areaCirculo=pi*Math.pow(radioCirculo,2)
-console.group("Circulo: ");
-console.log("El valor del Radio es es: "+radioCirculo);
-console.log("El valor del diametro es: "+diametroCirculo);
-console.log("El valor de PI es: "+pi);
-console.log("El Perimetro del Circulo es: "+perimetroCirculo);
-console.log("El Area del Circulo es: "+areaCirculo);
-console.groupEnd();
+function diametroCirculo(radio){
+    return radio * 2;
+}
+
+const pi = Math.PI;
+function perimetroCirculo(radio){
+    const diametro=diametroCirculo(radio);
+    return pi * diametro;
+}
+
+function areaCirculo(radio){
+    return pi * Math.pow(radio,2);
+}
+
+
